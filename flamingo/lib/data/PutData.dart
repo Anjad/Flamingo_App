@@ -1,5 +1,8 @@
 import 'package:flamengo/models/ListOnFullCategory.dart';
 import 'package:flamengo/models/ListCategories.dart';
+import 'package:flamengo/models/ListDormitories.dart';
+import 'package:flamengo/pages/mainPages/mainBottomNavigationPage/CategoriesPage.dart';
+import 'package:flamengo/pages/mainPages/mainBottomNavigationPage/CategoriesPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -77,4 +80,7 @@ class PutData {
     "Accommodation",
     "Fixer",
   ]);
+  ListDormitories listDormitories =
+      new ListDormitories("", ["", ""], ["", ""], ["", ""]);
+  CategoriesPage a = new CategoriesPage();
 }

@@ -1,6 +1,6 @@
 class ListPost {
   List<String> postImages;
-  List<String> titlrPost;
+  List<String> titlePost;
   List<String> descriptionPost;
   List<String> pricePost;
 }

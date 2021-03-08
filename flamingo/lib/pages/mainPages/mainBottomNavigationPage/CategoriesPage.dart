@@ -6,12 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flamengo/data/PutData.dart';
 
 class CategoriesPage extends StatefulWidget {
+  String _selectedCategoriesIndex;
+  _CategoriesPageState a = new _CategoriesPageState();
   @override
   _CategoriesPageState createState() => _CategoriesPageState();
 }
 
 class _CategoriesPageState extends State<CategoriesPage> {
   double widthAll = 100;
+  String _selectedCategoriesIndex;
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
@@ -52,9 +55,10 @@ class _CategoriesPageState extends State<CategoriesPage> {
                     itemCount: PutData().photos.imagePost.length,
                     itemBuilder: (context, index) {
                       return Center(
-                          child: SizedBox(
+                          child: Container(
                               child: ListTile(
                         onTap: () {
+                          _selectedCategoriesIndex = index.toString();
                           switch (index) {
                             case 0:
                               Navigator.push(context,

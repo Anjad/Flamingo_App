@@ -5,16 +5,14 @@ import 'package:flamengo/pages/mainPages/mainBottomNavigationPage/MessagesPage.d
 import 'package:flamengo/pages/mainPages/mainBottomNavigationPage/ProfilePage.dart';
 import 'package:flutter/material.dart';
 
-
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-  int _currentIndex =2;
-  final List<Widget> _children=[
-
+  int _currentIndex = 2;
+  final List<Widget> _children = [
     ProfilePage(),
     MessagesPage(),
     HomePage(),
@@ -22,9 +20,9 @@ class _MainPageState extends State<MainPage> {
     CategoriesPage()
   ];
 
-  _onTappedBar(int index){
+  _onTappedBar(int index) {
     setState(() {
-      _currentIndex =index;
+      _currentIndex = index;
     });
   }
 
@@ -32,7 +30,6 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _children[_currentIndex],
-
       bottomNavigationBar: BottomNavigationBar(
           elevation: 10,
           backgroundColor: Colors.white,
@@ -43,28 +40,26 @@ class _MainPageState extends State<MainPage> {
           onTap: _onTappedBar,
           items: [
             BottomNavigationBarItem(
-              icon:Icon( Icons.person),
-              title:Text("Profile"),
+              icon: Icon(Icons.person),
+              title: Text("Profile"),
             ),
             BottomNavigationBarItem(
-              icon:Icon( Icons.message),
-              title:Text("Messages"),
+              icon: Icon(Icons.message),
+              title: Text("Messages"),
             ),
             BottomNavigationBarItem(
-              icon:Icon( Icons.home),
-              title:Text("Home"),
+              icon: Icon(Icons.home),
+              title: Text("Home"),
             ),
             BottomNavigationBarItem(
-              icon:Icon( Icons.favorite),
-              title:Text("Favorites"),
+              icon: Icon(Icons.favorite),
+              title: Text("Favorites"),
             ),
             BottomNavigationBarItem(
-              icon:Icon( Icons.category),
-              title:Text("categories"),
+              icon: Icon(Icons.category),
+              title: Text("categories"),
             ),
-          ]
-      ),
-
+          ]),
     );
   }
 }
